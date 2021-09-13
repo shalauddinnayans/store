@@ -3,10 +3,12 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+/* page header  */
 .shop-header {
   text-align: center;
   font-size: 100px;
 }
+/* search section  */
 .search-field {
   border: none;
   border-radius: 10px;
@@ -31,6 +33,7 @@ body {
   border-radius: 25px;
   margin-left: 3px;
 }
+/* product section */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -59,9 +62,9 @@ body {
 .title {
   height: 100px;
 }
+/* cart section  */
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
