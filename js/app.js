@@ -7,7 +7,7 @@ const loadProducts = () => {
 
 // show all product in UI 
 const showProducts = (products) => {
-  const allProducts = products.map((pd) => pd);
+  const allProducts = products.map((product) => product);
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
@@ -16,7 +16,15 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h3 class="title" >${product.title}</h3>
+      <div>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      </div>
+      <h4>⭐ ${product.rating.rate} <span>(${product.rating.count})</span></h4>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
@@ -29,13 +37,13 @@ let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
+// update tex 
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
   // update total price 
   updateTotal()
 };
-
+//  get input 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
