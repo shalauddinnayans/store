@@ -21,13 +21,17 @@
     <h1 class="shop-header">HERO STORE</h1>
   </header>
   <main class="main">
+
+    <!-- search field  -->
     <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+      <div class="input-group search-box">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
+        </span>
       </div>
     </div>
     <!-- product section  -->
